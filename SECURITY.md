@@ -9,7 +9,7 @@ currently being supported with security updates.
 | ------- | ------------------ |--------------------------|
 | 1.0.x   | :white_check_mark: | AnimaPet - Doc 1         |
 | 2.0.x   | :x:                |                          |
-| 3.0.x   | :white_check_mark: |                          |
+| 3.0.x   | :x: |                          |
 | 4.0     | :x:                |                          |
 
 
