@@ -1,0 +1,52 @@
+Trabalho em Grupo II - Grupo 06
+
+1. Funções (autenticação):
+
+	|------------------------------------------------------
+	|	1.1. Login
+	|		1.1.1. Colaborador
+	|			1.1.1.2. Manutenção de dados cadastrais; 
+	|		1.1.2. Médico veterinário
+	|			1.1.2.1. Manutenção de dados cadastrais;
+	|		1.1.3. Administrador do sistema;
+	|			1.1.3.1. Administração do sistema;
+	|		1.1.4. Parceiro
+	|			1.1.4.1. Manutenção de dados cadastrais;
+	|
+	|	1.2. Agenda
+	|		1.2.1. Cadastro de agenda
+	|			1.2.1.1. Colaborador;
+	|			1.2.1.2. Médico veterinário;
+	|			1.2.1.3. Administrador do sistema;
+	|			1.2.1.4. Parceiro;
+	|
+	|		1.2.2. Edição de agenda;
+	|			1.2.1.1. Colaborador;
+	|			1.2.1.2. Médico veterinário;
+	|			1.2.1.3. Administrador do sistema;
+	|			1.2.1.4. Parceiro;
+	|
+	|		1.2.3. Exclusão de agenda
+	|			1.2.3.1. Administrador do sistema;
+	|
+	|		1.2.4. Bloqueio de agenda
+	|			1.2.4.1. Colaborador;
+	|			1.2.4.2. Médico veterinário;
+	|			1.2.4.3. Administrador do sistema;
+	|			1.2.4.4. Parceiro;
+	|
+	|	1.2. Serviços prestados
+	|		1.2.1. Banho
+	|		1.2.2. Tosa
+	|		1.2.3. Vacina
+	|		1.2.4. Atendimento emergencial (veterinário)
+	|		1.2.5. Castração
+	|		1.2.6. Adoção
+	|------------------------------------------------------
+
+2. Funções (abertas):
+	|------------------------------------------------------
+	|	2.1. Galeria de fotos
+	|
+	|	2.2. Doações
+	|------------------------------------------------------	
