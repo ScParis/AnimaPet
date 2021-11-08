@@ -17,25 +17,25 @@ Postem na atividade o endereço do repositório.
 1. Análise de Moscow
 2. Diagrama de classes
 3. Matriz de rastreabilidade de requisitos;
-4. Arquivo '.doc' contendo:
-    4.1. Conceitos iniciais
-        4.1.1. Objetivos do documento
-        4.1.2. Escopo do produto
-        4.1.3. Missão do produto
-        4.1.4. Missão do produto
-        4.1.5. Benefícios essenciais do produto
-        4.1.6. Stakeholdes
-            4.1.6.1. Stakeholdes internos
-            4.1.6.2. Stakeholdes externos
-        4.1.7. Requisitos
-            4.1.7.1. Requisitos funcionais
-            4.1.7.2. Requisitos não-funcionais
-        4.1.8. Calendário de atividades
-        4.1.9. Ferramentas à aplicar
-        4.1.10. História de usuário
-        4.1.11. Análise de Moscow
-    4.2. Arquivo '.txt' contendo:
-        4.2.1. Funções fechadas do sistema; (requer autenticação por login)
-        4.2.2. Funções abertas do sistema; (não requer autenticação por login)
+4. Arquivo '.doc' contendo
+	- Conceitos iniciais
+		- Objetivos do documento
+		- Escopo do produto
+		- Missão do produto
+		- Missão do produto
+		- Benefícios essenciais do produto
+		- Stakeholdes
+			- Stakeholdes internos
+			- Stakeholdes externos
+		- Requisitos
+			- Requisitos funcionais
+			- Requisitos não-funcionais
+		- Calendário de atividades
+		- Ferramentas à aplicar
+		- História de usuário
+		- Análise de Moscow
+	- Arquivo '.txt' contendo:
+		- Funções fechadas do sistema; (requer autenticação por login)
+		- Funções abertas do sistema; (não requer autenticação por login)
 
 
