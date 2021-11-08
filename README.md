@@ -34,5 +34,8 @@ Postem na atividade o endereço do repositório.
         4.1.9. Ferramentas à aplicar
         4.1.10. História de usuário
         4.1.11. Análise de Moscow
+    4.2. Arquivo '.txt' contendo:
+        4.2.1. Funções fechadas do sistema; (requer autenticação por login)
+        4.2.2. Funções abertas do sistema; (não requer autenticação por login)
 
 
