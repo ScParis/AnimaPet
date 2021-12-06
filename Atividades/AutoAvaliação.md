@@ -14,6 +14,8 @@ A nota aferida não será sobre a correção do relatório e sim uma bonificaç�
 
 ----
 
+Scherman Paris - Grupo 6
+
 Atividade N2 - Relatório
 
 1. Repositório do grupo
