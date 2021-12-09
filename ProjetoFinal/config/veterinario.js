@@ -16,16 +16,6 @@ const post = ((req, res) => {
   res.status(201).send(veterinario)
 })
 
-const putId = ((req, res) => {
-  const veterinarioId = +res.params['id']
-  const veterinario = res.body
-
-  const index = Veterinario.findIndex(veterinarioIterator => veterinarioIterator.id === veterinarioId)
-  Veterinario[index] = veterinario
-
-  res.status(200).send(veterinario)
-})
-
 const getId = ((req, res) => {
   const veterinarioId = +req.params['id']
 
@@ -41,7 +31,6 @@ const deleteId = ((req, res) => {
 module.exports = {
   get_all,
   post,
-  putId,
   getId,
   deleteId
 };
