@@ -1,9 +1,9 @@
-const get_all = ((request, response) => {
-    response.send(Veterinario)
+const get_all = ((req, res) => {
+    res.send(Veterinario)
   })
   
-  const post = ((request, response) => {
-    const veterinario = request.body
+  const post = ((req, res) => {
+    const veterinario = req.body
     const primeiro_id = Veterinario
       ? Math.max.apply(
         null,
@@ -13,29 +13,29 @@ const get_all = ((request, response) => {
       veterinario.id = primeiro_id
     Veterinario.push(veterinario)
   
-    response.status(201).send(veterinario)
+    res.status(201).send(veterinario)
   })
   
-  const putId = ((request, response) => {
-    const veterinarioId = +request.params['id']
-    const veterinario = request.body
+  const putId = ((req, res) => {
+    const veterinarioId = +res.params['id']
+    const veterinario = res.body
   
     const index = Veterinario.findIndex(veterinarioIterator => veterinarioIterator.id === veterinarioId)
     Veterinario[index] = veterinario
   
-    response.status(200).send(veterinario)
+    res.status(200).send(veterinario)
   })
   
-  const getId = ((request, response) => {
-    const veterinarioId = +request.params['id']
+  const getId = ((req, res) => {
+    const veterinarioId = +req.params['id']
   
-    response.status(200).send(Veterinario.find(veterinarioIterator => veterinarioIterator.id === veterinarioId))
+    res.status(200).send(Veterinario.find(veterinarioIterator => veterinarioIterator.id === veterinarioId))
   })
   
-    const deleteId = ((request, response) => {
-    const veterinarioId = +request.params['id']
+    const deleteId = ((req, res) => {
+    const veterinarioId = +req.params['id']
     Veterinario = Veterinario.filter(veterinarioIterator => veterinarioIterator.id !== veterinarioId)
-    response.status(204).send({})
+    res.status(204).send({})
   })
   
   module.exports = { get_all, post, putId, getId, deleteId };
