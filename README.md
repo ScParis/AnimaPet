@@ -39,37 +39,35 @@
 
 [Teste](https://github.com/ScParis/AnimaPet/tree/main/ProjetoFinal/Test)
 
-1. GET All
+1. [GET All](https://github.com/ScParis/AnimaPet/blob/main/ProjetoFinal/Test/api/tests/veterinario/get_all.robot)
 	- Teste realizando GET, sem fitlros, no endpoint /veterinario
 		- Impresso json de retorno, no log report;
 		- Guardado Status Response em uma variável;
 		- Validado status code;
 
-2. GET by ID
+2. [GET by ID](https://github.com/ScParis/AnimaPet/blob/main/ProjetoFinal/Test/api/tests/veterinario/get_by_id.robot)
 	- Teste realizando GET, passando parâmetro ID, no endpoint /veterinario/{id}
 		- Impresso json de retorno, no log report;
 		- Guardado Status Response em uma variável;
 		- Validado status code;
 
-3. POST
+3. [POST](https://github.com/ScParis/AnimaPet/blob/main/ProjetoFinal/Test/api/tests/veterinario/post.robot)
 	- Teste realizando POST, no endpoint /veterinario
 		- Criado discionário de dados, para cadastro de um novo veterinário;
 		- Criada validação do status code;
 		- Impresso json de retorno, no log report;
 
-4. DELETE
+4. [DELETE](https://github.com/ScParis/AnimaPet/blob/main/ProjetoFinal/Test/api/tests/veterinario/delet.robot)
 	- Teste realizando DELETE, passando parâmetro ID, no endpoint /veterinario/{id}
 		- Impresso json de retorno, no log report;
 		- Guardado Status Response em uma variável;
 		- Validado status code;
 
-[Tutorial de instalação do Robot](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst)
-
-
 ### Bibliotecas ustilizadas
 
-[RobotFramework](https://github.com/robotframework/robotframework)
-[RequestsLibrary](https://github.com/MarketSquare/robotframework-requests#readme)
-[Collections](https://robotframework.org/robotframework/latest/libraries/Collections.html)
-[OperatingSystem](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html)
+1. [RobotFramework](https://github.com/robotframework/robotframework)
+	- [Tutorial de instalação do Robot](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst) 
+3. [RequestsLibrary](https://github.com/MarketSquare/robotframework-requests#readme)
+4. [Collections](https://robotframework.org/robotframework/latest/libraries/Collections.html)
+5. [OperatingSystem](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html)
 ---
