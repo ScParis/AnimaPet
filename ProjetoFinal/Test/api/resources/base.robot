@@ -4,7 +4,6 @@ Documentation       Exemplos da própria Library
 Library             RequestsLibrary
 Library             Collections
 Library             OperatingSystem
-# Resource            ../resources/variables/variables.robot
 
 *** Variables ***
 ${HOST}      http://localhost:3000/
