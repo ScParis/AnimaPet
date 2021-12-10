@@ -1,288 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.8.10 on linux)" generated="20211210 11:26:48.876" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.3 (Python 3.8.10 on linux)" generated="20211210 11:43:14.671" rpa="false" schemaversion="2">
 <suite id="s1" name="Veterinario" source="/media/scherman/HD1/Particular/Faculdade/UniRitter/Disciplinas/2021_02/Práticas de Engenharia de Software/Trabalhos/AnimaPet/ProjetoFinal/Test/api/tests/veterinario">
 <suite id="s1-s1" name="Delet" source="/media/scherman/HD1/Particular/Faculdade/UniRitter/Disciplinas/2021_02/Práticas de Engenharia de Software/Trabalhos/AnimaPet/ProjetoFinal/Test/api/tests/veterinario/delet.robot">
 <test id="s1-s1-t1" name="Requisição De DELETE">
 <kw name="Conectar A API Do Projeto" library="base">
-<msg timestamp="20211210 11:26:49.016" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211210 11:43:14.839" level="TRACE">Arguments: [  ]</msg>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>alias=mygithubAuth</arg>
 <arg>url=${HOST}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20211210 11:26:49.018" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
-<msg timestamp="20211210 11:26:49.018" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<msg timestamp="20211210 11:26:49.018" level="DEBUG">Creating session: mygithubAuth</msg>
-<msg timestamp="20211210 11:26:49.019" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f6c64aa51f0&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.017" endtime="20211210 11:26:49.019"/>
+<msg timestamp="20211210 11:43:14.840" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
+<msg timestamp="20211210 11:43:14.840" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20211210 11:43:14.840" level="DEBUG">Creating session: mygithubAuth</msg>
+<msg timestamp="20211210 11:43:14.841" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f9fa9b0f7f0&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.839" endtime="20211210 11:43:14.841"/>
 </kw>
-<msg timestamp="20211210 11:26:49.019" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.016" endtime="20211210 11:26:49.019"/>
+<msg timestamp="20211210 11:43:14.841" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.838" endtime="20211210 11:43:14.841"/>
 </kw>
-<status status="PASS" starttime="20211210 11:26:49.015" endtime="20211210 11:26:49.020"/>
+<kw name="Realizar Requisição de DELETE By ID" library="base">
+<arg>6</arg>
+<msg timestamp="20211210 11:43:14.842" level="TRACE">Arguments: [ ${ID}='6' ]</msg>
+<kw name="DELETE" library="RequestsLibrary">
+<arg>url=http://localhost:3000/${URI}/${ID}</arg>
+<doc>Sends a DELETE request.</doc>
+<msg timestamp="20211210 11:43:14.843" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario/6' ]</msg>
+<msg timestamp="20211210 11:43:14.849" level="INFO">DELETE Request : url=http://localhost:3000/veterinario/6 
+ path_url=/veterinario/6 
+ headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20211210 11:43:14.849" level="INFO">DELETE Response : url=http://localhost:3000/veterinario/6 
+ status=204, reason=No Content 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Date': 'Fri, 10 Dec 2021 14:43:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=None 
+ </msg>
+<msg timestamp="20211210 11:43:14.849" level="TRACE">Return: &lt;Response [204]&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.843" endtime="20211210 11:43:14.849"/>
+</kw>
+<kw name="DELETE" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>url=http://localhost:3000/${URI}/${ID}</arg>
+<doc>Sends a DELETE request.</doc>
+<msg timestamp="20211210 11:43:14.850" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario/6' ]</msg>
+<msg timestamp="20211210 11:43:14.857" level="INFO">DELETE Request : url=http://localhost:3000/veterinario/6 
+ path_url=/veterinario/6 
+ headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20211210 11:43:14.857" level="INFO">DELETE Response : url=http://localhost:3000/veterinario/6 
+ status=204, reason=No Content 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Date': 'Fri, 10 Dec 2021 14:43:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=None 
+ </msg>
+<msg timestamp="20211210 11:43:14.858" level="TRACE">Return: &lt;Response [204]&gt;</msg>
+<msg timestamp="20211210 11:43:14.858" level="INFO">${RESPOSTA} = &lt;Response [204]&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.850" endtime="20211210 11:43:14.858"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Resposta: ${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211210 11:43:14.862" level="TRACE">Arguments: [ 'Resposta: ' ]</msg>
+<msg timestamp="20211210 11:43:14.863" level="INFO">Resposta: </msg>
+<msg timestamp="20211210 11:43:14.863" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.858" endtime="20211210 11:43:14.863"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20211210 11:43:14.864" level="TRACE">Arguments: [ '${RESPOSTA}' ]</msg>
+<msg timestamp="20211210 11:43:14.864" level="INFO">${RESPOSTA} = &lt;Response [204]&gt;</msg>
+<msg timestamp="20211210 11:43:14.864" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.863" endtime="20211210 11:43:14.864"/>
+</kw>
+<msg timestamp="20211210 11:43:14.865" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.842" endtime="20211210 11:43:14.865"/>
+</kw>
+<kw name="Confere o status code" library="base">
+<arg>204</arg>
+<msg timestamp="20211210 11:43:14.865" level="TRACE">Arguments: [ ${STATUS_ESPERADO}='204' ]</msg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUS_ESPERADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20211210 11:43:14.867" level="TRACE">Arguments: [ 204 | '204' ]</msg>
+<msg timestamp="20211210 11:43:14.867" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20211210 11:43:14.867" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.866" endtime="20211210 11:43:14.867"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Status Code Retornado: ${RESPOSTA.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211210 11:43:14.869" level="TRACE">Arguments: [ 'Status Code Retornado: 204 -- Status Code Esperado: 204' ]</msg>
+<msg timestamp="20211210 11:43:14.869" level="INFO">Status Code Retornado: 204 -- Status Code Esperado: 204</msg>
+<msg timestamp="20211210 11:43:14.869" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.868" endtime="20211210 11:43:14.869"/>
+</kw>
+<msg timestamp="20211210 11:43:14.869" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.865" endtime="20211210 11:43:14.869"/>
+</kw>
+<status status="PASS" starttime="20211210 11:43:14.836" endtime="20211210 11:43:14.870"/>
 </test>
 <doc>Exemplos da própria Library: GetAll /veterinarios
 https://github.com/ScParis/AnimaPet</doc>
-<status status="PASS" starttime="20211210 11:26:48.906" endtime="20211210 11:26:49.021"/>
+<status status="PASS" starttime="20211210 11:43:14.697" endtime="20211210 11:43:14.871"/>
 </suite>
 <suite id="s1-s2" name="Get All" source="/media/scherman/HD1/Particular/Faculdade/UniRitter/Disciplinas/2021_02/Práticas de Engenharia de Software/Trabalhos/AnimaPet/ProjetoFinal/Test/api/tests/veterinario/get_all.robot">
 <test id="s1-s2-t1" name="Requisição De GET ALL">
 <kw name="Conectar A API Do Projeto" library="base">
-<msg timestamp="20211210 11:26:49.030" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211210 11:43:14.891" level="TRACE">Arguments: [  ]</msg>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>alias=mygithubAuth</arg>
 <arg>url=${HOST}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20211210 11:26:49.031" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
-<msg timestamp="20211210 11:26:49.031" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<msg timestamp="20211210 11:26:49.031" level="DEBUG">Creating session: mygithubAuth</msg>
-<msg timestamp="20211210 11:26:49.031" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f6c64ac7af0&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.030" endtime="20211210 11:26:49.031"/>
+<msg timestamp="20211210 11:43:14.893" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
+<msg timestamp="20211210 11:43:14.893" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20211210 11:43:14.893" level="DEBUG">Creating session: mygithubAuth</msg>
+<msg timestamp="20211210 11:43:14.894" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f9fa9b0f0d0&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.892" endtime="20211210 11:43:14.894"/>
 </kw>
-<msg timestamp="20211210 11:26:49.031" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.030" endtime="20211210 11:26:49.031"/>
+<msg timestamp="20211210 11:43:14.894" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.891" endtime="20211210 11:43:14.894"/>
 </kw>
 <kw name="Realizar Requisição de GET ALL" library="base">
-<msg timestamp="20211210 11:26:49.032" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211210 11:43:14.896" level="TRACE">Arguments: [  ]</msg>
 <kw name="GET" library="RequestsLibrary">
 <var>${VET_DATA}</var>
 <arg>url=http://localhost:3000/${URI}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20211210 11:26:49.032" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario' ]</msg>
-<msg timestamp="20211210 11:26:49.039" level="INFO">GET Request : url=http://localhost:3000/veterinario 
+<msg timestamp="20211210 11:43:14.897" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario' ]</msg>
+<msg timestamp="20211210 11:43:14.913" level="INFO">GET Request : url=http://localhost:3000/veterinario 
  path_url=/veterinario 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20211210 11:26:49.039" level="INFO">GET Response : url=http://localhost:3000/veterinario 
+<msg timestamp="20211210 11:43:14.913" level="INFO">GET Response : url=http://localhost:3000/veterinario 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '393', 'ETag': 'W/"189-7ehZPH9cPYWSj375JdhTo7IvoMg"', 'Date': 'Fri, 10 Dec 2021 14:26:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body=[{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"},{"nome":"Maria","email":"maria@wimail.com","celular":"51935654898","id":6}] 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '318', 'ETag': 'W/"13e-itT5tw66UHVygIBYFytnnxH5Gec"', 'Date': 'Fri, 10 Dec 2021 14:43:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=[{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"}] 
  </msg>
-<msg timestamp="20211210 11:26:49.039" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20211210 11:26:49.039" level="INFO">${VET_DATA} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.032" endtime="20211210 11:26:49.039"/>
+<msg timestamp="20211210 11:43:14.913" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20211210 11:43:14.913" level="INFO">${VET_DATA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.896" endtime="20211210 11:43:14.913"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Retorno com todos os cadastros: ${VET_DATA.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211210 11:26:49.040" level="TRACE">Arguments: [ "Retorno com todos os cadastros: [{'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}, {'id': 2, 'nome': 'irineu', 'email': 'irineu@wimail.com', 'celular': '51975754797'}, {'id': 3, 'nome': 'josnel', 'email': 'josnel@wimail.com', 'celular': '51924644848'}, {'id': 4, 'nome': 'jossinel', 'email': 'jossinel@wimail.com', 'celular': '51924254898'}, {'nome': 'Maria', 'email': 'maria@wimail.com', 'celular': '51935654898', 'id': 6}]" ]</msg>
-<msg timestamp="20211210 11:26:49.040" level="INFO">Retorno com todos os cadastros: [{'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}, {'id': 2, 'nome': 'irineu', 'email': 'irineu@wimail.com', 'celular': '51975754797'}, {'id': 3, 'nome': 'josnel', 'email': 'josnel@wimail.com', 'celular': '51924644848'}, {'id': 4, 'nome': 'jossinel', 'email': 'jossinel@wimail.com', 'celular': '51924254898'}, {'nome': 'Maria', 'email': 'maria@wimail.com', 'celular': '51935654898', 'id': 6}]</msg>
-<msg timestamp="20211210 11:26:49.040" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.039" endtime="20211210 11:26:49.040"/>
+<msg timestamp="20211210 11:43:14.915" level="TRACE">Arguments: [ "Retorno com todos os cadastros: [{'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}, {'id': 2, 'nome': 'irineu', 'email': 'irineu@wimail.com', 'celular': '51975754797'}, {'id': 3, 'nome': 'josnel', 'email': 'josnel@wimail.com', 'celular': '51924644848'}, {'id': 4, 'nome': 'jossinel', 'email': 'jossinel@wimail.com', 'celular': '51924254898'}]" ]</msg>
+<msg timestamp="20211210 11:43:14.915" level="INFO">Retorno com todos os cadastros: [{'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}, {'id': 2, 'nome': 'irineu', 'email': 'irineu@wimail.com', 'celular': '51975754797'}, {'id': 3, 'nome': 'josnel', 'email': 'josnel@wimail.com', 'celular': '51924644848'}, {'id': 4, 'nome': 'jossinel', 'email': 'jossinel@wimail.com', 'celular': '51924254898'}]</msg>
+<msg timestamp="20211210 11:43:14.915" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.914" endtime="20211210 11:43:14.915"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${RESPOSTA}</var>
 <arg>url=http://localhost:3000/${URI}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20211210 11:26:49.041" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario' ]</msg>
-<msg timestamp="20211210 11:26:49.045" level="INFO">GET Request : url=http://localhost:3000/veterinario 
+<msg timestamp="20211210 11:43:14.916" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario' ]</msg>
+<msg timestamp="20211210 11:43:14.922" level="INFO">GET Request : url=http://localhost:3000/veterinario 
  path_url=/veterinario 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20211210 11:26:49.045" level="INFO">GET Response : url=http://localhost:3000/veterinario 
+<msg timestamp="20211210 11:43:14.922" level="INFO">GET Response : url=http://localhost:3000/veterinario 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '393', 'ETag': 'W/"189-7ehZPH9cPYWSj375JdhTo7IvoMg"', 'Date': 'Fri, 10 Dec 2021 14:26:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
- body=[{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"},{"nome":"Maria","email":"maria@wimail.com","celular":"51935654898","id":6}] 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '318', 'ETag': 'W/"13e-itT5tw66UHVygIBYFytnnxH5Gec"', 'Date': 'Fri, 10 Dec 2021 14:43:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=[{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"}] 
  </msg>
-<msg timestamp="20211210 11:26:49.046" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20211210 11:26:49.046" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.040" endtime="20211210 11:26:49.046"/>
+<msg timestamp="20211210 11:43:14.923" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20211210 11:43:14.923" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.915" endtime="20211210 11:43:14.923"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Resposta: ${RESPOSTA.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211210 11:26:49.047" level="TRACE">Arguments: [ 'Resposta: [{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"},{"nome":"Maria","email":"maria@wimail.com","celular":"51935654898","id":6}]' ]</msg>
-<msg timestamp="20211210 11:26:49.047" level="INFO">Resposta: [{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"},{"nome":"Maria","email":"maria@wimail.com","celular":"51935654898","id":6}]</msg>
-<msg timestamp="20211210 11:26:49.048" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.046" endtime="20211210 11:26:49.048"/>
+<msg timestamp="20211210 11:43:14.927" level="TRACE">Arguments: [ 'Resposta: [{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"}]' ]</msg>
+<msg timestamp="20211210 11:43:14.927" level="INFO">Resposta: [{"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"},{"id":2,"nome":"irineu","email":"irineu@wimail.com","celular":"51975754797"},{"id":3,"nome":"josnel","email":"josnel@wimail.com","celular":"51924644848"},{"id":4,"nome":"jossinel","email":"jossinel@wimail.com","celular":"51924254898"}]</msg>
+<msg timestamp="20211210 11:43:14.930" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.923" endtime="20211210 11:43:14.930"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPOSTA}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20211210 11:26:49.048" level="TRACE">Arguments: [ '${RESPOSTA}' ]</msg>
-<msg timestamp="20211210 11:26:49.049" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
-<msg timestamp="20211210 11:26:49.049" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.048" endtime="20211210 11:26:49.049"/>
+<msg timestamp="20211210 11:43:14.930" level="TRACE">Arguments: [ '${RESPOSTA}' ]</msg>
+<msg timestamp="20211210 11:43:14.931" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<msg timestamp="20211210 11:43:14.931" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.930" endtime="20211210 11:43:14.931"/>
 </kw>
-<msg timestamp="20211210 11:26:49.049" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.031" endtime="20211210 11:26:49.049"/>
+<msg timestamp="20211210 11:43:14.931" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.895" endtime="20211210 11:43:14.931"/>
 </kw>
 <kw name="Confere o status code" library="base">
 <arg>200</arg>
-<msg timestamp="20211210 11:26:49.050" level="TRACE">Arguments: [ ${STATUS_ESPERADO}='200' ]</msg>
+<msg timestamp="20211210 11:43:14.932" level="TRACE">Arguments: [ ${STATUS_ESPERADO}='200' ]</msg>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPOSTA.status_code}</arg>
 <arg>${STATUS_ESPERADO}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20211210 11:26:49.051" level="TRACE">Arguments: [ 200 | '200' ]</msg>
-<msg timestamp="20211210 11:26:49.052" level="INFO">Argument types are:
+<msg timestamp="20211210 11:43:14.934" level="TRACE">Arguments: [ 200 | '200' ]</msg>
+<msg timestamp="20211210 11:43:14.934" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<msg timestamp="20211210 11:26:49.052" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.050" endtime="20211210 11:26:49.052"/>
+<msg timestamp="20211210 11:43:14.934" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.932" endtime="20211210 11:43:14.934"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Status Code Retornado: ${RESPOSTA.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211210 11:26:49.053" level="TRACE">Arguments: [ 'Status Code Retornado: 200 -- Status Code Esperado: 200' ]</msg>
-<msg timestamp="20211210 11:26:49.053" level="INFO">Status Code Retornado: 200 -- Status Code Esperado: 200</msg>
-<msg timestamp="20211210 11:26:49.053" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.052" endtime="20211210 11:26:49.053"/>
+<msg timestamp="20211210 11:43:14.935" level="TRACE">Arguments: [ 'Status Code Retornado: 200 -- Status Code Esperado: 200' ]</msg>
+<msg timestamp="20211210 11:43:14.935" level="INFO">Status Code Retornado: 200 -- Status Code Esperado: 200</msg>
+<msg timestamp="20211210 11:43:14.935" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.934" endtime="20211210 11:43:14.935"/>
 </kw>
-<msg timestamp="20211210 11:26:49.054" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.049" endtime="20211210 11:26:49.054"/>
+<msg timestamp="20211210 11:43:14.936" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.931" endtime="20211210 11:43:14.936"/>
 </kw>
-<status status="PASS" starttime="20211210 11:26:49.029" endtime="20211210 11:26:49.054"/>
+<status status="PASS" starttime="20211210 11:43:14.890" endtime="20211210 11:43:14.936"/>
 </test>
 <doc>Exemplos da própria Library: GetAll /veterinarios
 https://github.com/ScParis/AnimaPet</doc>
-<status status="PASS" starttime="20211210 11:26:49.022" endtime="20211210 11:26:49.055"/>
+<status status="PASS" starttime="20211210 11:43:14.875" endtime="20211210 11:43:14.937"/>
 </suite>
 <suite id="s1-s3" name="Get By Id" source="/media/scherman/HD1/Particular/Faculdade/UniRitter/Disciplinas/2021_02/Práticas de Engenharia de Software/Trabalhos/AnimaPet/ProjetoFinal/Test/api/tests/veterinario/get_by_id.robot">
 <test id="s1-s3-t1" name="Requisição De GET ALL">
 <kw name="Conectar A API Do Projeto" library="base">
-<msg timestamp="20211210 11:26:49.065" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211210 11:43:14.949" level="TRACE">Arguments: [  ]</msg>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>alias=mygithubAuth</arg>
 <arg>url=${HOST}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20211210 11:26:49.066" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
-<msg timestamp="20211210 11:26:49.066" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<msg timestamp="20211210 11:26:49.066" level="DEBUG">Creating session: mygithubAuth</msg>
-<msg timestamp="20211210 11:26:49.067" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f6c64a92220&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.065" endtime="20211210 11:26:49.067"/>
+<msg timestamp="20211210 11:43:14.950" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
+<msg timestamp="20211210 11:43:14.951" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20211210 11:43:14.951" level="DEBUG">Creating session: mygithubAuth</msg>
+<msg timestamp="20211210 11:43:14.951" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f9fa9b0fc70&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.950" endtime="20211210 11:43:14.952"/>
 </kw>
-<msg timestamp="20211210 11:26:49.067" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.065" endtime="20211210 11:26:49.067"/>
+<msg timestamp="20211210 11:43:14.952" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.949" endtime="20211210 11:43:14.953"/>
 </kw>
 <kw name="Realizar Requisição de GET By ID" library="base">
 <arg>1</arg>
-<msg timestamp="20211210 11:26:49.068" level="TRACE">Arguments: [ ${ID}='1' ]</msg>
+<msg timestamp="20211210 11:43:14.954" level="TRACE">Arguments: [ ${ID}='1' ]</msg>
 <kw name="GET" library="RequestsLibrary">
 <var>${VET_DATA}</var>
 <arg>url=http://localhost:3000/${URI}/${ID}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20211210 11:26:49.069" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario/1' ]</msg>
-<msg timestamp="20211210 11:26:49.074" level="INFO">GET Request : url=http://localhost:3000/veterinario/1 
+<msg timestamp="20211210 11:43:14.955" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario/1' ]</msg>
+<msg timestamp="20211210 11:43:14.961" level="INFO">GET Request : url=http://localhost:3000/veterinario/1 
  path_url=/veterinario/1 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20211210 11:26:49.075" level="INFO">GET Response : url=http://localhost:3000/veterinario/1 
+<msg timestamp="20211210 11:43:14.961" level="INFO">GET Response : url=http://localhost:3000/veterinario/1 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-NZPq4VZwFQwcpfLSekZc/mI6zo4"', 'Date': 'Fri, 10 Dec 2021 14:26:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-NZPq4VZwFQwcpfLSekZc/mI6zo4"', 'Date': 'Fri, 10 Dec 2021 14:43:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
  body={"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"} 
  </msg>
-<msg timestamp="20211210 11:26:49.075" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20211210 11:26:49.075" level="INFO">${VET_DATA} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.068" endtime="20211210 11:26:49.075"/>
+<msg timestamp="20211210 11:43:14.961" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20211210 11:43:14.961" level="INFO">${VET_DATA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.954" endtime="20211210 11:43:14.961"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Retorno com todos os cadastros: ${VET_DATA.json()}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211210 11:26:49.077" level="TRACE">Arguments: [ "Retorno com todos os cadastros: {'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}" ]</msg>
-<msg timestamp="20211210 11:26:49.077" level="INFO">Retorno com todos os cadastros: {'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}</msg>
-<msg timestamp="20211210 11:26:49.077" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.075" endtime="20211210 11:26:49.077"/>
+<msg timestamp="20211210 11:43:14.963" level="TRACE">Arguments: [ "Retorno com todos os cadastros: {'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}" ]</msg>
+<msg timestamp="20211210 11:43:14.963" level="INFO">Retorno com todos os cadastros: {'id': 1, 'nome': 'jaozinho', 'email': 'joaozinho@wimail.com', 'celular': '51925654898'}</msg>
+<msg timestamp="20211210 11:43:14.964" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.962" endtime="20211210 11:43:14.964"/>
 </kw>
 <kw name="GET" library="RequestsLibrary">
 <var>${RESPOSTA}</var>
 <arg>url=http://localhost:3000/${URI}/${ID}</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20211210 11:26:49.078" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario/1' ]</msg>
-<msg timestamp="20211210 11:26:49.083" level="INFO">GET Request : url=http://localhost:3000/veterinario/1 
+<msg timestamp="20211210 11:43:14.964" level="TRACE">Arguments: [ url='http://localhost:3000/veterinario/1' ]</msg>
+<msg timestamp="20211210 11:43:14.970" level="INFO">GET Request : url=http://localhost:3000/veterinario/1 
  path_url=/veterinario/1 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20211210 11:26:49.083" level="INFO">GET Response : url=http://localhost:3000/veterinario/1 
+<msg timestamp="20211210 11:43:14.971" level="INFO">GET Response : url=http://localhost:3000/veterinario/1 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-NZPq4VZwFQwcpfLSekZc/mI6zo4"', 'Date': 'Fri, 10 Dec 2021 14:26:49 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-NZPq4VZwFQwcpfLSekZc/mI6zo4"', 'Date': 'Fri, 10 Dec 2021 14:43:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
  body={"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"} 
  </msg>
-<msg timestamp="20211210 11:26:49.084" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20211210 11:26:49.084" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.077" endtime="20211210 11:26:49.084"/>
+<msg timestamp="20211210 11:43:14.971" level="TRACE">Return: &lt;Response [200]&gt;</msg>
+<msg timestamp="20211210 11:43:14.971" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.964" endtime="20211210 11:43:14.971"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Resposta: ${RESPOSTA.text}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211210 11:26:49.085" level="TRACE">Arguments: [ 'Resposta: {"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"}' ]</msg>
-<msg timestamp="20211210 11:26:49.086" level="INFO">Resposta: {"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"}</msg>
-<msg timestamp="20211210 11:26:49.086" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.084" endtime="20211210 11:26:49.086"/>
+<msg timestamp="20211210 11:43:14.972" level="TRACE">Arguments: [ 'Resposta: {"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"}' ]</msg>
+<msg timestamp="20211210 11:43:14.972" level="INFO">Resposta: {"id":1,"nome":"jaozinho","email":"joaozinho@wimail.com","celular":"51925654898"}</msg>
+<msg timestamp="20211210 11:43:14.972" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.971" endtime="20211210 11:43:14.972"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${RESPOSTA}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20211210 11:26:49.086" level="TRACE">Arguments: [ '${RESPOSTA}' ]</msg>
-<msg timestamp="20211210 11:26:49.087" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
-<msg timestamp="20211210 11:26:49.087" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.086" endtime="20211210 11:26:49.087"/>
+<msg timestamp="20211210 11:43:14.973" level="TRACE">Arguments: [ '${RESPOSTA}' ]</msg>
+<msg timestamp="20211210 11:43:14.973" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<msg timestamp="20211210 11:43:14.973" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.973" endtime="20211210 11:43:14.973"/>
 </kw>
-<msg timestamp="20211210 11:26:49.088" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.067" endtime="20211210 11:26:49.088"/>
+<msg timestamp="20211210 11:43:14.973" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.953" endtime="20211210 11:43:14.974"/>
 </kw>
 <kw name="Confere o status code" library="base">
 <arg>200</arg>
-<msg timestamp="20211210 11:26:49.090" level="TRACE">Arguments: [ ${STATUS_ESPERADO}='200' ]</msg>
+<msg timestamp="20211210 11:43:14.975" level="TRACE">Arguments: [ ${STATUS_ESPERADO}='200' ]</msg>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${RESPOSTA.status_code}</arg>
 <arg>${STATUS_ESPERADO}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20211210 11:26:49.092" level="TRACE">Arguments: [ 200 | '200' ]</msg>
-<msg timestamp="20211210 11:26:49.092" level="INFO">Argument types are:
+<msg timestamp="20211210 11:43:14.976" level="TRACE">Arguments: [ 200 | '200' ]</msg>
+<msg timestamp="20211210 11:43:14.977" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<msg timestamp="20211210 11:26:49.092" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.090" endtime="20211210 11:26:49.092"/>
+<msg timestamp="20211210 11:43:14.977" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.975" endtime="20211210 11:43:14.977"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Status Code Retornado: ${RESPOSTA.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211210 11:26:49.095" level="TRACE">Arguments: [ 'Status Code Retornado: 200 -- Status Code Esperado: 200' ]</msg>
-<msg timestamp="20211210 11:26:49.095" level="INFO">Status Code Retornado: 200 -- Status Code Esperado: 200</msg>
-<msg timestamp="20211210 11:26:49.095" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.093" endtime="20211210 11:26:49.095"/>
+<msg timestamp="20211210 11:43:14.979" level="TRACE">Arguments: [ 'Status Code Retornado: 200 -- Status Code Esperado: 200' ]</msg>
+<msg timestamp="20211210 11:43:14.979" level="INFO">Status Code Retornado: 200 -- Status Code Esperado: 200</msg>
+<msg timestamp="20211210 11:43:14.979" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.977" endtime="20211210 11:43:14.979"/>
 </kw>
-<msg timestamp="20211210 11:26:49.096" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.089" endtime="20211210 11:26:49.096"/>
+<msg timestamp="20211210 11:43:14.980" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.974" endtime="20211210 11:43:14.980"/>
 </kw>
-<status status="PASS" starttime="20211210 11:26:49.064" endtime="20211210 11:26:49.097"/>
+<status status="PASS" starttime="20211210 11:43:14.948" endtime="20211210 11:43:14.980"/>
 </test>
 <doc>Exemplos da própria Library: GetAll /veterinarios
 https://github.com/ScParis/AnimaPet</doc>
-<status status="PASS" starttime="20211210 11:26:49.057" endtime="20211210 11:26:49.103"/>
+<status status="PASS" starttime="20211210 11:43:14.938" endtime="20211210 11:43:14.981"/>
 </suite>
 <suite id="s1-s4" name="Post" source="/media/scherman/HD1/Particular/Faculdade/UniRitter/Disciplinas/2021_02/Práticas de Engenharia de Software/Trabalhos/AnimaPet/ProjetoFinal/Test/api/tests/veterinario/post.robot">
 <test id="s1-s4-t1" name="Requisição De POST">
 <kw name="Conectar A API Do Projeto" library="base">
-<msg timestamp="20211210 11:26:49.119" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20211210 11:43:14.994" level="TRACE">Arguments: [  ]</msg>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>alias=mygithubAuth</arg>
 <arg>url=${HOST}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20211210 11:26:49.119" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
-<msg timestamp="20211210 11:26:49.120" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<msg timestamp="20211210 11:26:49.120" level="DEBUG">Creating session: mygithubAuth</msg>
-<msg timestamp="20211210 11:26:49.120" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f6c64aa5c10&gt;</msg>
-<status status="PASS" starttime="20211210 11:26:49.119" endtime="20211210 11:26:49.121"/>
+<msg timestamp="20211210 11:43:14.995" level="TRACE">Arguments: [ alias='mygithubAuth' | url='http://localhost:3000/' | disable_warnings='True' ]</msg>
+<msg timestamp="20211210 11:43:14.995" level="INFO">Creating Session using : alias=mygithubAuth, url=http://localhost:3000/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20211210 11:43:14.995" level="DEBUG">Creating session: mygithubAuth</msg>
+<msg timestamp="20211210 11:43:14.996" level="TRACE">Return: &lt;requests.sessions.Session object at 0x7f9fa9ac6820&gt;</msg>
+<status status="PASS" starttime="20211210 11:43:14.994" endtime="20211210 11:43:14.996"/>
 </kw>
-<msg timestamp="20211210 11:26:49.121" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20211210 11:26:49.118" endtime="20211210 11:26:49.121"/>
+<msg timestamp="20211210 11:43:14.996" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20211210 11:43:14.994" endtime="20211210 11:43:14.996"/>
 </kw>
-<status status="PASS" starttime="20211210 11:26:49.117" endtime="20211210 11:26:49.123"/>
+<status status="PASS" starttime="20211210 11:43:14.993" endtime="20211210 11:43:14.997"/>
 </test>
 <doc>Exemplos da própria Library: GetAll /veterinarios
 https://github.com/ScParis/AnimaPet</doc>
-<status status="PASS" starttime="20211210 11:26:49.108" endtime="20211210 11:26:49.129"/>
+<status status="PASS" starttime="20211210 11:43:14.983" endtime="20211210 11:43:14.997"/>
 </suite>
-<status status="PASS" starttime="20211210 11:26:48.878" endtime="20211210 11:26:49.136"/>
+<status status="PASS" starttime="20211210 11:43:14.672" endtime="20211210 11:43:14.999"/>
 </suite>
 <statistics>
 <total>

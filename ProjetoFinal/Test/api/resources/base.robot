@@ -38,6 +38,18 @@ Realizar Requisição de GET By ID
 
     Set Test Variable   ${RESPOSTA}
 
+Realizar Requisição de DELETE By ID
+
+    [Arguments]        ${ID}
+
+    DELETE          url=http://localhost:3000/${URI}/${ID}    
+    
+    ${RESPOSTA}=        DELETE          url=http://localhost:3000/${URI}/${ID}
+    
+    Log                 Resposta: ${RESPOSTA.text}
+
+    Set Test Variable   ${RESPOSTA}
+
 Confere o status code
 
     [Arguments]     ${STATUS_ESPERADO}
