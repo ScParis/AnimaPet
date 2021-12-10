@@ -18,6 +18,6 @@ app.use(cors(corsOptions))
 app.use(bodyParser.json())
 app.use(router)
 // para testar normal sem docker trocar app.listen(port, host) por app.listen(3000)
-app.listen(PORT, HOST);
+app.listen(3000);
 
 console.log(`Running on http://${HOST}:${PORT}`);
