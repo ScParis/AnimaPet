@@ -59,9 +59,9 @@ Creating json File
     Create File         ./api/resources/files/post/file_json.json          {"nome":"Robot Vet","email":"vet_robot@email.com","celular":"51935654132"}
 
 Post Vet
-    [Arguments]            ${ID}
+    # [Arguments]            ${ID}
     
-    DELETE          url=http://localhost:3000/${URI}/${ID}
+    # DELETE          url=http://localhost:3000/${URI}/${ID}
 
     ${BODY}=    Create Dictionary    nome=Robot Vet     email=vet_robot@email.com        celular=51935654132
    
@@ -70,3 +70,8 @@ Post Vet
     Status Should Be    201    ${resp}
 
     Log         ${resp.json()}
+   
+    # ${data}=    Evaluate    ${resp.json()}[data]
+   
+   
+    # Dictionaries Should Be Equal    ${data}    ${BODY}

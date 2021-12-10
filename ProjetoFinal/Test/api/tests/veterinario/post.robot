@@ -11,4 +11,5 @@ Resource            ../../resources/base.robot
 Requisição De POST
 
     Creating json File
-    Post Vet            5
+    Realizar Requisição de DELETE By ID            5
+    Post Vet
