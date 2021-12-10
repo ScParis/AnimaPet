@@ -10,6 +10,5 @@ Resource            ../../resources/base.robot
 ***Test Cases***
 Requisição De GET ALL
 
-    Conectar A API Do Projeto
     Realizar Requisição de GET By ID         1
     Confere o status code                    200

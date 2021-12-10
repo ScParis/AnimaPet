@@ -10,6 +10,5 @@ Resource            ../../resources/base.robot
 ***Test Cases***
 Requisição De DELETE
 
-    Conectar A API Do Projeto
     Realizar Requisição de DELETE By ID      6
     Confere o status code                    204

@@ -11,10 +11,6 @@ ${HOST}      http://localhost:3000/
 ${URI}       veterinario
 
 *** Keywords ***
-Conectar A API Do Projeto
-
-    Create Session      alias=mygithubAuth    url=${HOST}       disable_warnings=True
-
 Realizar Requisição de GET ALL
     ${VET_DATA}         GET          url=http://localhost:3000/${URI}
     Log                 Retorno com todos os cadastros: ${VET_DATA.json()}
@@ -59,26 +55,18 @@ Confere o status code
     Log             Status Code Retornado: ${RESPOSTA.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}
 
 
+Creating json File
+    Create File         ./api/resources/files/post/file_json.json          {"nome":"Robot Vet","email":"vet_robot@email.com","celular":"51935654132"}
 
-    # Confere sucesso na requisição   ${MY_USER_DATA}
+Post Vet
+    [Arguments]            ${ID}
+    
+    DELETE          url=http://localhost:3000/${URI}/${ID}
 
-# Conectar na API do GitHub sem autenticação
-#     Create Session      alias=mygithub        url=${GITHUB_HOST}     disable_warnings=True
+    ${BODY}=    Create Dictionary    nome=Robot Vet     email=vet_robot@email.com        celular=51935654132
+   
+    ${resp}=    POST    http://localhost:3000/${URI}     json=${BODY}
+   
+    Status Should Be    201    ${resp}
 
-# Pesquisar issues com o state "${STATE}" e com o label "${LABEL}"
-#     &{PARAMS}           Create Dictionary    state=${STATE}       labels=${LABEL}
-#     ${MY_ISSUES}        Get Request          alias=mygithub       uri=${ISSUES_URI}    params=${PARAMS}
-#     Log                 Lista de Issues: ${MY_ISSUES.json()}
-#     Confere sucesso na requisição   ${MY_ISSUES}
-
-# Enviar a reação "${REACTION}" para a issue "${ISSUE_NUMBER}"
-#     ${HEADERS}          Create Dictionary    Accept=application/vnd.github.squirrel-girl-preview+json
-#     ${MY_REACTION}      Post Request    alias=mygithubAuth    uri=${ISSUES_URI}/${ISSUE_NUMBER}/reactions
-#     ...                                 data={"content": "${REACTION}"}     headers=${HEADERS}
-#     Log                 Meus dados: ${MY_REACTION.json()}
-#     Confere sucesso na requisição   ${MY_REACTION}
-
-# Confere sucesso na requisição
-#     [Arguments]      ${RESPONSE}
-#     Should Be True   '${RESPONSE.status_code}'=='200' or '${RESPONSE.status_code}'=='201'
-#     ...  msg=Erro na requisição! Verifique: ${RESPONSE}
+    Log         ${resp.json()}
