@@ -1,5 +1,5 @@
-# docker_node_tutorial
-Tutorial to deploy an Node.js application on Docker
+# API-FRONT-BACK ANIMAPET
+Tutorial de deploy
 
 
 # Como rodar
@@ -10,12 +10,12 @@ Tutorial to deploy an Node.js application on Docker
 
 ```sh
 $ docker build -t seunome/docker-node-tutorial .
-$ docker run -p 49160:3000 -d seunome/docker-node-tutorial
+$ docker run -p 3000:3000 -d seunome/docker-node-tutorial
 ```
 
 ### Acesse sua aplicação:
 
-Em seu navegador vá até `localhost:49160`
+Em seu navegador vá até `localhost:3000`
 
 ### Comandos úteis:
 
