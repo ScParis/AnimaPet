@@ -32,10 +32,12 @@
 
 [Projeto Final](https://github.com/ScParis/AnimaPet/tree/main/ProjetoFinal)
 
-
+Responsável: NATANAEL TOAZZA - 201715939
 ---
 
 # Testes Automatizados na API
+
+Responsável: SCHERMAN PARIS – 202027594
 
 [Teste](https://github.com/ScParis/AnimaPet/tree/main/ProjetoFinal/Test)
 
@@ -65,9 +67,11 @@
 
 ### Bibliotecas ustilizadas
 
+
 1. [RobotFramework](https://github.com/robotframework/robotframework)
-	- [Tutorial de instalação do Robot](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst) 
+2. [Tutorial de instalação do Robot](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst) 
 3. [RequestsLibrary](https://github.com/MarketSquare/robotframework-requests#readme)
 4. [Collections](https://robotframework.org/robotframework/latest/libraries/Collections.html)
 5. [OperatingSystem](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html)
+
 ---
