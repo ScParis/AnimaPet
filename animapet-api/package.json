@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/claudineyjr/docker_node_tutorial#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "joi": "^17.5.0",
     "koa": "^2.13.4"

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nome": "Pitoco",
+        "raca": "Rusky",
+        "idade": 10
+    },
+    {
+        "id": 2,
+        "nome": "Maninha",
+        "raca": "Vira-Lata",
+        "idade": 2
+    },
+    {
+        "id": 3,
+        "nome": "Tufão",
+        "raca": "Pitbull",
+        "idade": 8
+    },
+    {
+        "id": 4,
+        "nome": "Dimitri",
+        "raca": "Schitzu",
+        "idade": 13
+    }
+]

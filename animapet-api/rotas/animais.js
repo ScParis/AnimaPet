@@ -1,8 +1,7 @@
 const Joi = require('joi')
 var express = require('express')
 
-var animaisData = require('../dados/animais.js')
-var fakeDBHelper = require('../helpers/fakeJsonDBHelper')
+var animaisData = require('../dados/animais.json')
 
 const schema = Joi.object({
     nome: Joi.string().min(3).required(),
