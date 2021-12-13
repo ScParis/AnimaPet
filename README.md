@@ -30,14 +30,15 @@
 
 ---
 
-[Projeto Final](https://github.com/ScParis/AnimaPet/tree/main/ProjetoFinal)
+# [Projeto Final](https://github.com/ScParis/AnimaPet/tree/main/ProjetoFinal)
 
-Responsável: NATANAEL TOAZZA - 201715939
+	Responsável: NATANAEL TOAZZA - 201715939
+
 ---
 
 # Testes Automatizados na API
 
-Responsável: SCHERMAN PARIS – 202027594
+	Responsável: SCHERMAN PARIS – 202027594
 
 [Teste](https://github.com/ScParis/AnimaPet/tree/main/ProjetoFinal/Test)
 
